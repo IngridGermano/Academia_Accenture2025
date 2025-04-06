@@ -22,10 +22,3 @@ import './pages/productData.page'
 import './pages/selectPriceOption.page'
 import './pages/sendQuote.page'
 import './api/sendQuote.api'
-
-
-/*
-Cypress.on('uncaught:exception', (err, runnable) => {
-    return false; // Ignora qualquer erro de JavaScript não tratado
-  });
-  */

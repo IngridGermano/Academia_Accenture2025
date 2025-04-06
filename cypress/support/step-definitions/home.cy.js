@@ -3,13 +3,13 @@ import {Given, When, And, Then, Before, After} from 'cypress-cucumber-preprocess
 Given ('que acesso o portal Tricentis', () => {
     cy.visit('/')
 })
-When ('clico no botão Automobile', () => {
+And ('clico no botão Automobile', () => {
     cy.clickBtnAutomobile()
 })
-Then ('valido o acesso a página Automobile', () => {
+And ('valido o acesso a página Automobile', () => {
     cy.validarAutomobile()
 })
-And ('preencho os campos em Enter Vehicle Data', () => {
+When ('preencho os campos em Enter Vehicle Data', () => {
     cy.preencherEnterVehicleData()
 })
 And ('preencho os campos em Enter Insurant Data', () => {
@@ -23,4 +23,7 @@ And ('seleciono o plano desejado em Select Price Option', () => {
 })
 And ('preencho os campos em Send Quote', () => {
     cy.preencherSendQuote()
+})
+Then ('valido a mensagem de sucesso', () => {
+    cy.validacaoSucesso()
 })
