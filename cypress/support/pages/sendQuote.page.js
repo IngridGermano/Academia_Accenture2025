@@ -31,7 +31,6 @@ Cypress.Commands.add('preencherSendQuote', () => {
 
 Cypress.Commands.add('validacaoSucesso', () => {
     cy.get(SUCCESS_MESSAGE).should('be.visible')
-    // Usando cy.contains() para verificar o texto do sucesso
     cy.contains(SUCCESS_MESSAGE_TEXT).should('be.visible')
     cy.get(SUCCESS_MESSAGE).click()
 })
