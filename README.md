@@ -1,6 +1,6 @@
 <!-- Capa -->
 <p align="center">
-  <img src="https://1000marcas.net/wp-content/uploads/2021/05/Accenture-Logo.png" alt="Accenture Logo" width="400"/>
+  <img src="https://s32519.pcdn.co/es/wp-content/uploads/sites/3/2020/08/accenture-logo-672x284px.png" alt="Accenture Logo" width="250"/>
 </p>
 
 
