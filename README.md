@@ -1,7 +1,25 @@
+<!-- Capa -->
+<p align="center">
+  <img src="https://1000marcas.net/wp-content/uploads/2021/05/Accenture-Logo.png" alt="Accenture Logo" width="400"/>
+</p>
+
 
 # 🚀 Desafio Técnico Cypress - Academia Accenture 2025
 
 Projeto desenvolvido como parte da **Academia de QA da Accenture**, com foco em automação de testes web utilizando **Cypress** e boas práticas de QA.
+
+---
+
+## 🗂️ Índice
+
+- [🧠 Sobre o Projeto](#-sobre-o-projeto)
+- [🔍 Fluxo Automatizado (Happy Path)](#-fluxo-automatizado-happy-path)
+- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [🧱 Estrutura do Projeto](#-estrutura-do-projeto)
+- [📋 Boas Práticas Aplicadas](#-boas-práticas-aplicadas)
+- [🌪️ Diferencial (em desenvolvimento)](#️-diferencial-em-desenvolvimento)
+- [▶️ Como Executar o Projeto](#️-como-executar-o-projeto)
+- [👩‍💻 Autora](#-autora)
 
 ---
 
