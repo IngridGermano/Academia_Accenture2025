@@ -100,7 +100,18 @@ git clone https://github.com/IngridGermano/Academia_Accenture2025.git
 npm install
 ```
 
-3. Execute os testes:
+biblioteca faker|
+```bash
+npm install @faker-js/faker
+```
+
+3. Importe as bibliotecas necessárias:
+biblioteca moment |
+```bash
+import moment from 'moment';
+```
+
+4. Execute os testes:
 ```bash
 npx cypress open
 ```
