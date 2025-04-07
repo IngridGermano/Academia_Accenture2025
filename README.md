@@ -15,10 +15,10 @@ Projeto desenvolvido como parte da **Academia de QA da Accenture**, com foco em 
 
 - [🧠 Sobre o Projeto](#-sobre-o-projeto)
 - [🔍 Fluxo Automatizado (Happy Path)](#-fluxo-automatizado-happy-path)
+- [🧪 Cenário de Teste Negativo](#-cenário-de-teste-negativo)
 - [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
 - [🧱 Estrutura do Projeto](#-estrutura-do-projeto)
 - [📋 Boas Práticas Aplicadas](#-boas-práticas-aplicadas)
-- [🌪️ Diferencial (em desenvolvimento)](#️-diferencial-em-desenvolvimento)
 - [▶️ Como Executar o Projeto](#️-como-executar-o-projeto)
 - [👩‍💻 Autora](#-autora)
 
@@ -28,7 +28,9 @@ Projeto desenvolvido como parte da **Academia de QA da Accenture**, com foco em 
 
 Este projeto tem como objetivo automatizar o fluxo de preenchimento do formulário no portal [Tricentis Sample App](http://sampleapp.tricentis.com/101/app.php), aplicando práticas de testes de software modernas.
 
-### 🔍 Fluxo Automatizado (Happy Path)
+---
+
+## 🔍 Fluxo Automatizado (Happy Path)
 
 A automação cobre todo o fluxo positivo da aplicação, passando pelas seguintes etapas:
 
@@ -37,6 +39,26 @@ A automação cobre todo o fluxo positivo da aplicação, passando pelas seguint
 3. **Enter Product Data**
 4. **Select Price Option**
 5. **Send Quote**
+
+---
+### 💡Diferencial ☑️
+## 🧪 Cenário de Teste Negativo
+
+Além do fluxo completo (Happy Path), foi implementado um cenário negativo para validar o comportamento da aplicação quando o usuário tenta avançar para a página de **Price Option** sem preencher os passos anteriores.
+
+📄 **Feature:** `selectPriceOption-neg.feature`  
+🧾 **Step Definitions:** `selectPriceOption-neg.cy.js`  
+📦 **Page Object:** `selectPriceOption-neg.page.js`
+
+### ❌ Cenário:
+```
+Cenário: Usuário tenta prosseguir para selecionar o "Price Option" sem preencher os campos obrigatórios nas etapas anteriores
+  Dado que acesso o portal Tricentis
+  E clico no botão Automobile
+  E valido o acesso a página Automobile
+  Quando clico na página "Select Price Option" sem preencher os campos obrigatórios nas etapas anteriores
+  Então o sistema deve exibir uma mensagem informando que os campos anteriores são obrigatórios para poder exibir a tabela de preços
+```
 
 ---
 
@@ -74,18 +96,8 @@ Academia_Accenture2025/
 ✅ Dados sensíveis tratados via `Cypress.env`  
 ✅ Separação de responsabilidades entre specs e páginas  
 ✅ Organização de pastas clara e intuitiva  
-✅ Requisição **HTTP POST** feita na aba **Send Quote** via Postman
-
----
-
-## 🌪️ Diferencial (em desenvolvimento)
-
-📌 *Será adicionado ao projeto:*
-
-- **Cenários negativos de teste**, simulando falhas ou preenchimentos incorretos no formulário
-- Validações específicas para campos obrigatórios e mensagens de erro
-
-> ⚠️ Esta seção será atualizada quando os testes negativos forem concluídos!
+✅ Requisição **HTTP POST** feita na aba **Send Quote** via Postman  
+✅ **Cobertura de teste negativo com validação de comportamento esperado**
 
 ---
 
