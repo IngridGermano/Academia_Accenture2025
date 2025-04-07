@@ -2,13 +2,11 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false; // Ignora qualquer erro de JavaScript não tratado
 })
 
-Cypress.Commands.add('preencherSendQuote', () => {
     const email = Cypress.env('email')
     const phone = Cypress.env('phone')
     const username = Cypress.env('username')
     const password = Cypress.env('password')
     const confirmPassword = Cypress.env('confirmPassword')
-
     const INPUT_PASSWORD = '#password'
     const INPUT_EMAIL = '#email'
     const INPUT_PHONE = '#phone'
@@ -16,9 +14,10 @@ Cypress.Commands.add('preencherSendQuote', () => {
     const INPUT_CONFIRM_PASSWORD = '#confirmpassword'
     const INPUT_COMMENTS = '#Comments'
     const BTN_SEND = '#sendemail'
-    const SUCCESS_MESSAGE = '#confirm'
-    const SUCCESS_MESSAGE_TEXT = 'Sending e-mail success!'
+    const ALERT_LOADING = '#LoadingPDF'
+    const BTN_CONFIRM = '.confirm'
 
+Cypress.Commands.add('preencherSendQuote', () => {
     cy.get(INPUT_EMAIL).type(email)
     cy.get(INPUT_PHONE).type(phone)
     cy.get(INPUT_USERNAME).type(username)
@@ -30,7 +29,7 @@ Cypress.Commands.add('preencherSendQuote', () => {
 })
 
 Cypress.Commands.add('validacaoSucesso', () => {
-    cy.get(SUCCESS_MESSAGE).should('be.visible')
-    cy.contains(SUCCESS_MESSAGE_TEXT).should('be.visible')
-    cy.get(SUCCESS_MESSAGE).click()
+    cy.get(ALERT_LOADING ,{ timeout: 10000 }).should('not.exist')
+    cy.contains("Sending e-mail success!").should('be.visible')
+    cy.get(BTN_CONFIRM).click()
 })
