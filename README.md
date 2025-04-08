@@ -5,6 +5,14 @@
 
 ---
 
+<p align="center">
+  <img
+src="![Ingrid crachá com acessórios em formato de boneca](https://drive.google.com/uc?export=view&id=1Jh1tJbLqrZClql4VwaOPnXc3G87AJyjH)
+alt="Ingrid crachá" width="500"/>
+</p>
+
+---
+
 # 🚀 Desafio Técnico Cypress - Academia Accenture 2025
 
 Projeto desenvolvido como parte da **Academia de QA da Accenture**, com foco em automação de testes web utilizando **Cypress** e boas práticas de QA.
